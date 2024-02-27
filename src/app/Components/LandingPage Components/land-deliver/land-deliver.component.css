@@ -1,0 +1,39 @@
+/* .deliverSection{
+    margin-top: 7rem;
+} */
+
+.deliverInfo  p{
+
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.notes .notesInfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.notes .notesInfo .Info{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    padding: 5px 8px ;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+
+}
+.notes .notesInfo span{
+    font-weight: 300;
+    font-size: 14px;
+}
+.leftImage img ,.rightImage img {
+    width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
