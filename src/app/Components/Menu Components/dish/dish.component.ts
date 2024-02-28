@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dish',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './dish.component.html',
   styleUrl: './dish.component.css'
 })

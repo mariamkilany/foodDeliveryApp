@@ -1,0 +1,53 @@
+<div class="m-5">
+  <div class="row rounded-3 bg-light h-50 m-4">
+    <div class="col-12 col-sm-12 col-md-6">
+      <div>
+        <img
+          src="../../../assets/images/eggplate.jpg"
+          style="width: 90%"
+          class="rounded-3"
+        />
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h1 style="font-size: 4rem" class="fst-italic">pizza</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        voluptatibus, obcaecati corporis amet nam distinctio porro animi atque
+        architecto ipsa tempore vitae cumque adipisci minima ipsam, earum autem
+        minus et.
+      </p>
+      <span class="category m-2">categories</span>
+      <span class="area">Area</span>
+      <span> Rating</span>
+
+      <div class="mt-5">
+        <h3 style="color: var(--main-color)">Ingerdents</h3>
+        <div class="d-flex flex-wrap">
+          <span
+            class="m-1 ingredents"
+            *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]"
+            >Ingredient {{ i }}</span
+          >
+        </div>
+        <p class="mt-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-tag-fill price m-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+            />
+          </svg>
+          <strong style="font-size: 1.5rem;">500 L.E</strong>
+          <button class="btn mx-5" style="background-color: var(--main-color); color: white; padding: 10px; width: 200px;">Add to Cart</button>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.ingredents {
+  background-color: rgb(238, 238, 238);
+  border-color: whitesmoke;
+  color: gray;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.category {
+  background-color: rgba(171, 200, 171, 0.82);
+  border-color: whitesmoke;
+  color: rgb(22, 22, 22);
+  border-radius: 20px;
+  padding: 10px;
+}
+.area {
+  background-color: rgba(171, 200, 171, 0.82);
+
+  border-color: whitesmoke;
+  color: rgb(22, 22, 22);
+
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.price {
+  color: #38761d;
+}
