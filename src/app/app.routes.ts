@@ -6,6 +6,7 @@ import { ContactPageComponent } from './Pages/contact-page/contact-page.componen
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
 
 import { DetailsComponent } from './Pages/details/details.component';
+// import { authGuard } from './Services/auth.guard';
 
 export const routes: Routes = [
   {
@@ -13,9 +14,10 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  
   { path: 'home', component: LandingPageComponent },
   { path: 'about', component: AboutPageComponent },
-  { path: 'menu', component: DishesPageComponent ,canActivate:[authGuard]} },
+  { path: 'menu', component: DishesPageComponent},
   { path: 'details/:id', component: DetailsComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'sign', component: SigninPageComponent },
