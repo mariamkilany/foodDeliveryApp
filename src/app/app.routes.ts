@@ -4,6 +4,7 @@ import { DishesPageComponent } from './Pages/dishes-page/dishes-page.component';
 import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { ContactPageComponent } from './Pages/contact-page/contact-page.component';
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
+import { PaymentPageComponent } from './Pages/payment-page/payment-page.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'menu', component: DishesPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'sign', component: SigninPageComponent },
+  { path: 'payment', component: PaymentPageComponent },
 ];
