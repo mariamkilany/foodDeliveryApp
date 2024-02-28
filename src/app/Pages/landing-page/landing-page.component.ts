@@ -18,14 +18,14 @@ import { AuthService } from '../../Services/auth.service';
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
-  auth = inject(AuthService);
-  name = JSON.parse(sessionStorage.getItem("loggedInUser")!).name;
-  userProfileImage =JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
-  userEmail =JSON.parse(sessionStorage.getItem("loggedInUser")!).email;
+  // auth = inject(AuthService);
+  // name = JSON.parse(sessionStorage.getItem("loggedInUser")!).name;
+  // userProfileImage =JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
+  // userEmail =JSON.parse(sessionStorage.getItem("loggedInUser")!).email;
   
-  signOut(){
+  // signOut(){
 
-    sessionStorage.removeItem("loggedInUser");
-    this.auth.signOut();
-  }
+  //   sessionStorage.removeItem("loggedInUser");
+  //   this.auth.signOut();
+  // }
 }
