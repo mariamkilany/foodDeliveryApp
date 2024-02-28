@@ -1,0 +1,58 @@
+<div>
+  <h3 class="text-center my-3">Customers Reviews</h3>
+  <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review
+          ><app-review class="col-md-3"></app-review>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-3 mt-3" style="background-color: var(--info-color)">
+    <h5 class="text-light text-center">Add Your Review</h5>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-10">
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea"
+          ></textarea>
+          <label for="floatingTextarea">Review</label>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn rounded-circle col-1 d-flex justify-content-center align-items-center"
+        style="
+          background-color: var(--main-color);
+          width: fit-content;
+          height: fit-content;
+        "
+      >
+        <i class="bi bi-send-fill" style="color: white"></i>
+      </button>
+    </div>
+  </div>
+</div>
