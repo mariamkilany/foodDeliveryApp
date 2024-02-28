@@ -1,0 +1,79 @@
+.container {
+  padding: 0px 32px;
+}
+
+.info {
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid #f1f2f1;
+}
+
+.info.delivery p {
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.info div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info p {
+  color: #999;
+}
+
+.btn-change {
+  cursor: not-allowed;
+  border: none;
+  background-color: #f1f2f1;
+  padding: 8px 16px;
+  color: #999;
+  border-radius: 4px;
+}
+
+.delivery input[type="radio"] {
+  display: none;
+}
+
+.delivery input[type="radio"]+label {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.delivery input[type="radio"]:checked+label {
+  background-color: var(--main-color);
+  color: white;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.container>button {
+  width: 250px;
+  padding: 8px 16px;
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  margin-top: 16px;
+  float: right;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.container>button:hover {
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid transparent;
+  transform: scale(1.05);
+
+}

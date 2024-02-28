@@ -5,6 +5,7 @@ import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { ContactPageComponent } from './Pages/contact-page/contact-page.component';
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
 import { PaymentPageComponent } from './Pages/payment-page/payment-page.component';
+import { CheckoutPageComponent } from './Pages/checkout-page/checkout-page.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'contact', component: ContactPageComponent },
   { path: 'sign', component: SigninPageComponent },
   { path: 'payment', component: PaymentPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent },
 ];
