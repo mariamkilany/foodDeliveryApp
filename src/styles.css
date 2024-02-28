@@ -1,4 +1,5 @@
 :root {
+
   --main-color: #AD343E;
   --secondary-color: white;
   --btn-color-hover: #81282f;
@@ -9,3 +10,4 @@
 * {
   font-family: "Playfair Display", serif;
 }
+
