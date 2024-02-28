@@ -6,14 +6,9 @@ import { ContactPageComponent } from './Pages/contact-page/contact-page.componen
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
 
 export const routes: Routes = [
-    
-    {path:"" ,component:LandingPageComponent},
-    {path:"about" ,component:AboutPageComponent},
-    {path:"menu" ,component:DishesPageComponent},
-    {path:"contact" ,component:ContactPageComponent},
-    {path:"sign" ,component:SigninPageComponent},
-
-
-
-
+  { path: '', component: LandingPageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'menu', component: DishesPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'sign', component: SigninPageComponent },
 ];
