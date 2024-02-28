@@ -4,17 +4,19 @@ import { DishesPageComponent } from './Pages/dishes-page/dishes-page.component';
 import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { ContactPageComponent } from './Pages/contact-page/contact-page.component';
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
-import { authGuard } from './Services/auth.guard';
+
+import { DetailsComponent } from './Pages/details/details.component';
 
 export const routes: Routes = [
-    
-    {path:"" ,component:LandingPageComponent},
-    {path:"about" ,component:AboutPageComponent},
-    {path:"menu" ,component:DishesPageComponent, canActivate:[authGuard]},
-    {path:"contact" ,component:ContactPageComponent},
-    {path:"sign" ,component:SigninPageComponent},
-
-
-
-
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  { path: 'home', component: LandingPageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'menu', component: DishesPageComponent ,canActivate:[authGuard]} },
+  { path: 'details/:id', component: DetailsComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'sign', component: SigninPageComponent },
 ];
