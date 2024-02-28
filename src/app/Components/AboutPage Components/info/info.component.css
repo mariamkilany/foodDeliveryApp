@@ -1,0 +1,48 @@
+.valuableSection {
+    margin-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.valuableImage img{
+    border-radius: 10px;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.statistics{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.valubaleInfo h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.valubaleInfo p{
+    font-size: 0.8rem;
+    margin-bottom: 45px;
+}
+
+.statistics span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.statistics span:first-of-type{
+    font-size: 35px;
+    font-weight: 500;
+}
+.statistics span:last-of-type{
+    font-size: 0.8rem;
+    font-weight: 500;
+}

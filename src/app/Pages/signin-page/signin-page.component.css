@@ -1,0 +1,26 @@
+.signSection{
+    height: 100vh;
+    background-image:url("../../../assets/images/signinLand.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.signConatiner{
+    width: 50%;
+    margin: auto;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: whitesmoke;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}

@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --main-color: #AD343E;
+    --secondary-color:white;
+    --btn-color-hover:#81282f;
+    --info-color:#474747;
+  }
+  *{
+    font-family: "Playfair Display", serif;
+  }
