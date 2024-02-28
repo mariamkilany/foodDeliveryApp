@@ -45,3 +45,34 @@
   font-size: 1.5rem;
 }
 
+.signOut{
+  background-color: var(--main-color);
+  color: white;
+}
+
+.signOut:hover{
+  background-color: var( --btn-color-hover);
+  color: white;
+}
+.profile {
+  margin-right: 10px;
+}
+.profile ,.profile img{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 40px;
+}
+.ProfileSection{
+  display: flex;
+  align-items: center;
+}
+ 
+@media (max-width:768px) {
+  .nabBarSection {
+    flex-direction: column;
+  }
+  
+}
