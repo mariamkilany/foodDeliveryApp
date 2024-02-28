@@ -1,0 +1,27 @@
+footer {
+  background-color: var(--info-color);
+}
+
+h5 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 32.67px !important;
+  color: #fff;
+}
+
+p {
+  color: var(--info-light-color);
+  font-size: 16px;
+}
+
+.social-con {
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: none;
+}
