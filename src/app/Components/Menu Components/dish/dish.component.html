@@ -1,7 +1,7 @@
 <div class="mb-5">
   <div class="meal">
     <div class="mealImage">
-      <img [src]="meal.strMealThumb" alt="mealImage" />
+      <img [src]="meal.strMealThumb" alt="mealImage" loading="lazy" />
     </div>
     <div class="mealInfo">
       <div class="title">
@@ -26,11 +26,11 @@
       <p>Main Ingredients:<br /></p>
 
       <div class="ingredients">
-        <p class="main-ingredient">#{{ meal.strIngredient1 }}</p>
-        <p class="main-ingredient">#{{ meal.strIngredient2 }}</p>
-        <p class="main-ingredient">#{{ meal.strIngredient3 }}</p>
-        <p class="main-ingredient">#{{ meal.strIngredient4 }}</p>
-        <p class="main-ingredient">#{{ meal.strIngredient5 }}</p>
+        <p class="main-ingredient">{{ meal.strIngredient1 }}</p>
+        <p class="main-ingredient">{{ meal.strIngredient2 }}</p>
+        <p class="main-ingredient">{{ meal.strIngredient3 }}</p>
+        <p class="main-ingredient">{{ meal.strIngredient4 }}</p>
+        <p class="main-ingredient">{{ meal.strIngredient5 }}</p>
       </div>
       <div class="row">
         <div class="col-sm-12 col-md-6 mb-4">
@@ -75,7 +75,7 @@
         </div>
       </div>
 
-      <button class="btn">Add to cart</button>
+      <button class="btn" (click)="addToCart()">Add to cart</button>
     </div>
   </div>
 </div>

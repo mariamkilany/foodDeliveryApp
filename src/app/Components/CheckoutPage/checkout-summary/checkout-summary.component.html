@@ -1,57 +1,12 @@
 <div class="container">
   <h3>Order Summary</h3>
-  <div class="item">
-    <div>
-      <img
-        src="https://www.freeiconspng.com/thumbs/recipes-icon-png/recipe-apple-pie-png-32.png"
-        alt="product"
-      />
-    </div>
-    <div class="item-details">
-      <h4>Product Name</h4>
-      <p><span>type:</span> Beef</p>
-      <p><span>Quantity:</span> 1</p>
-    </div>
-    <div class="item-price">
-      <p>$100</p>
-    </div>
-  </div>
-  <div class="item">
-    <div>
-      <img
-        src="https://www.freeiconspng.com/thumbs/recipes-icon-png/recipe-apple-pie-png-32.png"
-        alt="product"
-      />
-    </div>
-    <div class="item-details">
-      <h4>Product Name</h4>
-      <p><span>type:</span> Beef</p>
-      <p><span>Quantity:</span> 1</p>
-    </div>
-    <div class="item-price">
-      <p>$100</p>
-    </div>
-  </div>
-  <div class="item">
-    <div>
-      <img
-        src="https://www.freeiconspng.com/thumbs/recipes-icon-png/recipe-apple-pie-png-32.png"
-        alt="product"
-      />
-    </div>
-    <div class="item-details">
-      <h4>Product Name</h4>
-      <p><span>type:</span> Beef</p>
-      <p><span>Quantity:</span> 1</p>
-    </div>
-    <div class="item-price">
-      <p>$100</p>
-    </div>
-  </div>
+  @for (item of cart; track item.id) {
+  <app-summary-item [item]="item"></app-summary-item>
+  }
   <div class="summary">
-    <p><span>Subtotal:</span> $300</p>
-    <p><span>Shipping:</span> $50</p>
+    <p><span>Subtotal:</span> $ {{ totalPayment }}</p>
+    <p><span>Shipping:</span> $ 50</p>
     <hr />
-    <p class="total"><span>Total:</span> $380</p>
+    <p class="total"><span>Total:</span>$ {{ totalPayment }}</p>
   </div>
 </div>
