@@ -1,0 +1,47 @@
+.navButton {
+  border-radius: 20px;
+  color: black;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  margin: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  box-shadow: none;
+}
+
+.navButton:active {
+  background-color: rgba(171, 200, 171, 0.82);
+}
+.active {
+  background-color: rgba(171, 200, 171, 0.82);
+}
+.signButton {
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  justify-items: end;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.signButton:active {
+  background-color: var(--main-color);
+}
+.activesignup {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+.logo {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
