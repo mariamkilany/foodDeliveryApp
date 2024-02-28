@@ -1,9 +1,10 @@
 :root {
-    --main-color: #AD343E;
-    --secondary-color:white;
-    --btn-color-hover:#81282f;
-    --info-color:#474747;
-  }
-  *{
-    font-family: "Playfair Display", serif;
-  }
+  --main-color: #ad343e;
+  --secondary-color: white;
+  --btn-color-hover: #81282f;
+  --info-color: #474747;
+  --info-light-color: #adb29e;
+}
+* {
+  font-family: "Playfair Display", serif;
+}
