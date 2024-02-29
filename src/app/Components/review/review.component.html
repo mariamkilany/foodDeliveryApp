@@ -1,29 +1,45 @@
+@if(review){
 <div
   class="review p-2 row-gap-2 d-flex flex-column border border-3 rounded-3 position-relative bg-light"
 >
-  <div class="d-flex column-gap-3 align-items-center">
-    <img
-      src="assets/images/Ellipse 19.jpg"
-      class="rounded-circle"
-      alt="avatar"
-    />
+  <div class="d-flex column-gap-1 align-items-center justify-content-between">
+    <img [src]="review.avatar" class="rounded-circle avatar" alt="avatar" />
     <div>
-      <h5 class="mb-0">Customer Name</h5>
-      <span class="fs-6 text-lowercase text-secondary text-center"
-        >Customermail.com</span
-      >
+      <h5 class="mb-0">{{ review.userName }}</h5>
+      <span class="fs-6 text-lowercase text-secondary text-center">{{
+        review.userEmail
+      }}</span>
     </div>
-    <!-- Check if review for this user -->
-    <!-- if(user){ -->
-    <button class="btn">
-      <i class="bi bi-pencil-fill" style="color: var(--info-color)"></i>
-    </button>
-    <!-- } -->
+    @if(this.name){
+    <div class="d-flex justify-content-center column-gap-1">
+      <button class="btn p-0" (click)="handleEditClick()">
+        <i class="bi bi-pencil-fill" style="color: var(--info-color)"></i>
+      </button>
+    </div>
+    }
   </div>
-  <!-- <hr /> -->
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, accusamus
-    nobis. Rem ab corporis a, laudantium aliquid repudiandae quae unde neque
-    fuga magnam iure, pariatur optio ullam velit labore. Facilis!
-  </p>
+  <div>
+    <textarea
+      [value]="review.comment"
+      [disabled]="edit"
+      class="review_input"
+      #myInput
+    ></textarea>
+    <div class="d-flex justify-content-end">
+      <button
+        [class.hide]="edit"
+        type="submit"
+        class="btn rounded-circle col-1 d-flex justify-content-center align-items-center"
+        style="
+          background-color: var(--main-color);
+          width: fit-content;
+          height: fit-content;
+        "
+        (click)="updateReview(myInput.value)"
+      >
+        <i class="bi bi-send-fill" style="color: white"></i>
+      </button>
+    </div>
+  </div>
 </div>
+}
