@@ -20,7 +20,7 @@ export const routes: Routes = [
   },
   { path: 'home', component: LandingPageComponent },
   { path: 'about', component: AboutPageComponent },
-  { path: 'menu', component: DishesPageComponent ,canActivate:[authGuard] },
+  { path: 'menu', component: DishesPageComponent},
   { path: 'details/:id', component: DetailsComponent },
   { path: 'fav', component: FavouratesComponent },
   { path: 'contact', component: ContactPageComponent },
