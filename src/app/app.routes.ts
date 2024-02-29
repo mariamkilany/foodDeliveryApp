@@ -5,10 +5,11 @@ import { DishesPageComponent } from './Pages/dishes-page/dishes-page.component';
 import { AboutPageComponent } from './Pages/about-page/about-page.component';
 import { ContactPageComponent } from './Pages/contact-page/contact-page.component';
 import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
-
+import { CartComponent } from './Pages/cart/cart.component';
 import { DetailsComponent } from './Pages/details/details.component';
 import { authGuard } from './Services/auth.guard';
 import { BlogPageComponent } from './Pages/blog-page/blog-page/blog-page.component';
+
 
 export const routes: Routes = [
   {
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'fav', component: FavouratesComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'sign', component: SigninPageComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'blog', component: BlogPageComponent },
 
 ];

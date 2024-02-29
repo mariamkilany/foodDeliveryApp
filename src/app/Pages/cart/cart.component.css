@@ -1,0 +1,18 @@
+*:not(i, button, .ex) {
+  font-family: Raleway, sans-serif !important;
+  /* font-size: 1rem; */
+  /* font-weight: 400 !important; */
+  /* line-height: 1.5 !important; */
+  color: #747d88 !important;
+  /* background-color: #ffffff !important; */
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+.input {
+  border-radius: 10px !important;
+}
+
+.customeBtn:hover {
+  background-color: var(--btn-color-hover) !important;
+}
