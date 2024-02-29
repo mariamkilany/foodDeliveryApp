@@ -64,7 +64,7 @@ export class CardService {
       `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/${product.id}`,
       product
     );
-
+    }
   updateAllCard(cart: any) {
     const updatePromises = cart.map((item: any) =>
       this.HttpClient.put(
