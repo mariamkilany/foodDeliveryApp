@@ -31,11 +31,13 @@
 .mealInfo .title h6 {
   color: var(--main-color);
   font-weight: 600;
+
+
 }
 
-.mealInfo .title svg:hover {
-  color: var(--main-color);
-
+.mealInfo .title h6,.mealInfo .title svg:hover{
+    color: var(--main-color);
+    font-weight: 600;
 }
 
 .mealInfo p {

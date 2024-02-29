@@ -13,6 +13,8 @@ const getMeals = async (letter: string) => {
 })
 export class MealsService {
   URLCATEGORIES = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+   private URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
+  
   constructor(private http: HttpClient) {}
 
   getAllCategories() {
@@ -26,5 +28,9 @@ export class MealsService {
         if (data.meals) allMeals.push(...data.meals);
       });
     return allMeals;
+  }
+
+  getMealsById(id: any) {
+    return this.http.get(this.URL + '?i=' + id);
   }
 }
