@@ -26,7 +26,7 @@ export class ReviewsComponent implements OnInit {
   userEmail = JSON.parse(sessionStorage.getItem('loggedInUser')!)?.email;
 
   review = '';
-  reviews: any;
+  reviews: any = [];
   id: any;
 
   ngOnInit(): void {
