@@ -17,13 +17,16 @@ export class DishComponent {
   userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
     ?.email;
 
+  isDisabled: boolean = this.userEmail ? false : true;
+
   constructor(
     private cardService: CardService,
     private favoriteService: FavService
   ) {}
 
   addToCart() {
-    window.alert('Your product has been added to the cart!');
+    const toastLiveExample = document.getElementById('liveToast');
+    toastLiveExample?.classList.add('show');
     this.cardService
       .createCard({
         date: new Date(),

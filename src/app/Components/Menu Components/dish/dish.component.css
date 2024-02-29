@@ -105,3 +105,8 @@
   fill: var(--main-color);
   stroke: var(--main-color);
 }
+
+
+.show {
+  display: block !important;
+}

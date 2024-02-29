@@ -19,7 +19,7 @@ export class PaymentPageComponent {
     .email;
 
   ngOnInit() {
-    this.cardService.getCard(this.userEmail).subscribe({
+    this.cardService.getCardBoth(this.userEmail).subscribe({
       next: (data: any) => {
         console.log(data);
         this.cartAnalysis.totalPayment = data.reduce(
