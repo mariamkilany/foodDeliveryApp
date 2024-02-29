@@ -25,11 +25,6 @@ export class CheckoutFormComponent implements OnInit {
   }
 
   updateCart() {
-    this.cart.forEach((item: any) => {
-      this.cardService.updateCard(item.id, {
-        ...item,
-        completed: true,
-      });
-    });
+    this.cardService.updateAllCard(this.cart);
   }
 }
