@@ -8,7 +8,7 @@ import { SigninPageComponent } from './Pages/signin-page/signin-page.component';
 
 import { DetailsComponent } from './Pages/details/details.component';
 import { authGuard } from './Services/auth.guard';
-
+import { BlogPageComponent } from './Pages/blog-page/blog-page/blog-page.component';
 
 export const routes: Routes = [
   {
@@ -23,4 +23,6 @@ export const routes: Routes = [
   { path: 'fav', component: FavouratesComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'sign', component: SigninPageComponent },
+  { path: 'blog', component: BlogPageComponent },
+
 ];
