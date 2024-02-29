@@ -34,6 +34,32 @@
     >
       Home
     </button>
+
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/menu"
+      [routerLinkActive]="['active']"
+    >
+      Menu
+    </button>
+
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/fav"
+      [routerLinkActive]="['active']"
+    >
+      Favourate
+    </button>
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/blog"
+      [routerLinkActive]="['active']"
+    >
+      Blog
+    </button>
     <button
       class="btn navButton"
       aria-current="page"
@@ -46,35 +72,25 @@
     <button
       class="btn navButton"
       aria-current="page"
-      routerLink="/menu"
-      [routerLinkActive]="['active']"
-    >
-      Menu
-    </button>
-    <button
-      class="btn navButton"
-      aria-current="page"
       routerLink="/contact"
       [routerLinkActive]="['active']"
     >
       Contact us
     </button>
-    <button
-      class="btn navButton"
-      aria-current="page"
-      routerLink="/fav"
-      [routerLinkActive]="['active']"
-    >
-      Favourate
-    </button>
   </div>
 
   <div class="nav nav-pills justify-content-center p-3">
-    <a routerLink="/cart" class="text-center btn">
+    <a routerLink="/cart" class="text-center btn position-relative">
+      <span
+        class="position-absolute top-25 start-10 translate-middle bg-danger border border-light rounded-circle text-white py-0 px-2 text-center"
+        style="font-weight: 900; font-size: 20px"
+      >
+        <span class="visually">{{ totalCardsNow }}</span>
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="24"
+        height="24"
         fill="currentColor"
         class="bi bi-cart m-2"
         viewBox="0 0 16 16"

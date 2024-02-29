@@ -16,7 +16,8 @@ export class TableComponent {
   constructor(private cardService: CardService) {}
 
   cartItems: any[] = [];
-  userEmail: string = 'fady@gmail.com';
+  userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
+    .email;
 
   ngOnInit() {
     this.cardService.getCard(this.userEmail).subscribe({

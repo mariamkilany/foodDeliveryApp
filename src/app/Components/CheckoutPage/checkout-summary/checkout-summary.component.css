@@ -1,6 +1,12 @@
 .container {
-  background-color: #f1f2f1;
+  background-color: #f8f9fa;
   padding: 34px 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-block: 20px;
+  }
 }
 
 h3 {

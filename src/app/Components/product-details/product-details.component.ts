@@ -16,6 +16,8 @@ import { CardService } from '../../Services/card.service';
 export class ProductDetailsComponent implements OnInit {
   ID = 0;
   Meal: any;
+  userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
+    .email;
 
   constructor(
     MyActivated: ActivatedRoute,
@@ -42,7 +44,7 @@ export class ProductDetailsComponent implements OnInit {
         mealId: this.Meal.idMeal,
         mealName: this.Meal.strMeal,
         mealThumb: this.Meal.strMealThumb,
-        userEmail: 'fady@gmail.com',
+        userEmail: this.userEmail,
         completed: false,
         quantity: 1,
         price: 500,

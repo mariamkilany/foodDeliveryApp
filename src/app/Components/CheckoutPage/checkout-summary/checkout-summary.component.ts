@@ -14,11 +14,13 @@ import { SummaryItemComponent } from '../summary-item/summary-item.component';
 export class CheckoutSummaryComponent {
   cart: any = [];
   totalPayment: number = 0;
+  userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
+    .email;
 
   constructor(private cardService: CardService) {}
 
   ngOnInit() {
-    this.cardService.getCard('fady@gmail.com').subscribe({
+    this.cardService.getCard(this.userEmail).subscribe({
       next: (data: any) => {
         console.log(data);
         this.cart = data;

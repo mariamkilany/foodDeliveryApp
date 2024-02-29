@@ -1,6 +1,6 @@
 import { FavService } from './../../../Services/fav.service';
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CardService } from '../../../Services/card.service';
 import { RouterModule } from '@angular/router';
 
@@ -14,6 +14,9 @@ import { RouterModule } from '@angular/router';
 })
 export class DishComponent {
   @Input() meal: any;
+  userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
+    ?.email;
+
   constructor(
     private cardService: CardService,
     private favoriteService: FavService
@@ -27,7 +30,7 @@ export class DishComponent {
         mealId: this.meal.idMeal,
         mealName: this.meal.strMeal,
         mealThumb: this.meal.strMealThumb,
-        userEmail: 'fady@gmail.com',
+        userEmail: this.userEmail,
         completed: false,
         quantity: 1,
         price: 500,
