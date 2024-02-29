@@ -58,7 +58,7 @@
 .ingredients {
   display: flex;
   flex-wrap: wrap;
-  height: 75px;
+  /* height: 75px; */
   align-items: start;
 }
 

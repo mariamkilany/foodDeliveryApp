@@ -35,7 +35,7 @@
       @for (number of totalPage; track number) {
       <li class="page-item" [class.active]="number === currentPage">
         <a
-          class="page-link border-0 rounded-circle shadow-sm m-1 p-2"
+          class="page-link border-0 rounded-circle shadow-sm m-1 "
           (click)="changePage(number); $event.preventDefault()"
           href="#"
           >{{ number + 1 }}</a
