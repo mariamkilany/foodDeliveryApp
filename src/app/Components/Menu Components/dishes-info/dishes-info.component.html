@@ -1,37 +1,47 @@
 <div class="container dishesSection">
-    <h1>
-        Our Dishes 
-    </h1>
-    <p>
-        We consider all the drivers of change gives you the components
-        <br>
-        you need to change to create a truly happens.
-    </p>
-    <div class="categories">
-        <div class="categoriesButtonCollection">
-            <button class="btn categpryButton">
-                All
-            </button>
-            <button class="btn categpryButton">
-                Breakfast
-            </button>
-            <button class="btn categpryButton">
-                Main Dishes
-            </button>
-            <button class="btn categpryButton">
-                Drinks
-            </button>
-            <button class="btn categpryButton">
-                Deserts
-            </button>
-        </div>
+  <h1>Our Dishes</h1>
+  <p>
+    We consider all the drivers of change gives you the components
+    <br />
+    you need to change to create a truly happens.
+  </p>
+  <div class="categories">
+    <div class="categoriesButtonCollection">
+      <button
+        class="btn categpryButton"
+        [class.active]="'0' === selectedCategory"
+        (click)="selectCategory('0')"
+      >
+        All
+      </button>
+      @for (category of categories; track category.idCategory) {
+      <button
+        class="btn categpryButton"
+        [class.active]="category.strCategory === selectedCategory"
+        (click)="selectCategory(category.strCategory)"
+      >
+        {{ category.strCategory }}
+      </button>
+      }
     </div>
-    <div class="row">
-        
-            <app-dish class="col-sm-12 col-md-4 col-lg-3"></app-dish>
-            <app-dish class="col-sm-12 col-md-4 col-lg-3"></app-dish>
-            <app-dish class="col-sm-12 col-md-4 col-lg-3"></app-dish>
-            <app-dish class="col-sm-12 col-md-4 col-lg-3"></app-dish>
-
-    </div>
+  </div>
+  <div class="row">
+    @for (meal of filteredMeals.slice(0,9); track meal.idMeal) {
+    <app-dish [meal]="meal" class="col-sm-12 col-md-6 col-lg-4"></app-dish>
+    }
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      @for (number of totalPage; track number) {
+      <li class="page-item" [class.active]="number === currentPage">
+        <a
+          class="page-link border-0 rounded-circle shadow-sm m-1 p-2"
+          (click)="changePage(number); $event.preventDefault()"
+          href="#"
+          >{{ number + 1 }}</a
+        >
+      </li>
+      }
+    </ul>
+  </nav>
 </div>

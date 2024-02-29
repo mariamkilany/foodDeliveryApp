@@ -1,0 +1,36 @@
+.item {
+  background-color: white;
+  display: flex;
+  margin-block: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item img {
+  width: 100px;
+  height: 100%;
+}
+
+.item h4 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.item-details {
+  margin-left: 16px;
+  padding: 8px;
+}
+
+.item-details span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #999;
+}
+
+.item-price {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: auto;
+  padding: 8px;
+}

@@ -1,93 +1,115 @@
-
-<div style="background-color: whitesmoke; " class="fromSections">
-    <div class="container pb-5 "  >
-        <div class="contactTitle">
-            <h1> Contact Us</h1>
-            <p>
-                We consider all the drivers of change gives you the components 
-                <br>
-                 you need to change to create a truly happens.
-            </p>
-        </div>
-    
-        <div class="contactForm">
-            <form>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter your name">
-                          </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email">
-                          </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" placeholder="Enter your Title">
-                          </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="mb-3">
-                            <label for="Message" class="form-label">Message</label>
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 200px"></textarea>
-                                <label for="floatingTextarea">Message...</label>
-                              </div>
-                          </div>
-                    </div>
-                    <div class="col-sm-12 m-auto text-center mt-2">
-                        <button type="submit" class="btn btn-primary">Send</button>
-
-                    </div>
-                </div>
-                
-              </form>
-        </div>
+<div style="background-color: whitesmoke" class="fromSections">
+  <div class="container pb-5">
+    <div class="contactTitle">
+      <h1>Contact Us</h1>
+      <p>
+        We consider all the drivers of change gives you the components
+        <br />
+        you need to change to create a truly happens.
+      </p>
     </div>
+
+    <div class="contactForm">
+      <form>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Name</label>
+              <input
+                [(ngModel)]="name"
+                name="name"
+                type="text"
+                class="form-control"
+                id="exampleInputName1"
+                placeholder="Enter your name"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email address</label
+              >
+              <input
+                [(ngModel)]="email"
+                name="email"
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter your Email"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                [(ngModel)]="subject"
+                name="subject"
+                type="text"
+                class="form-control"
+                id="subject"
+                placeholder="Enter your Title"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="mb-3">
+              <label for="Message" class="form-label">Message</label>
+              <div class="form-floating">
+                <textarea
+                  [(ngModel)]="message"
+                  name="message"
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea"
+                  style="height: 200px"
+                ></textarea>
+                <label for="floatingTextarea">Message...</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 m-auto text-center mt-2">
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary">
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 <div class="container">
-    <div class="resInfo">
-        <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <div class="details">
-                    <span>
-                         Call us
-                    </span>
-                    <span>
-                        (02)011-234-5678
-                    </span>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="details">
-                    <span>
-                         Hours
-                    </span>
-                    <span>
-                        Mon-Fri: 11am - 8pm 
-                        <br>
-                        Sat, Sun: 9am - 10pm 
-                    </span>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="details">
-                    <span>
-                        Our Location:
-                    </span>
-                    <span>
-                        123 Bridge Street         <br>
-                            Nowhere Land, LA 12345
-                            <br>
-                            Egypt
-                    </span>
-                </div>
-            </div>
+  <div class="resInfo">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="details">
+          <span> Call us </span>
+          <span> (02)011-234-5678 </span>
         </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="details">
+          <span> Hours </span>
+          <span>
+            Mon-Fri: 11am - 8pm
+            <br />
+            Sat, Sun: 9am - 10pm
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="details">
+          <span> Our Location: </span>
+          <span>
+            123 Bridge Street <br />
+            Nowhere Land, LA 12345
+            <br />
+            Egypt
+          </span>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,0 +1,23 @@
+.cards-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 34px;
+}
+
+.cards-layout>* {
+  flex-grow: 1;
+}
+
+.payment-header {
+  text-align: center;
+  margin: 20px;
+  font-size: 2em;
+  color: var(--info-color);
+}
+
+.payment-header span {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}

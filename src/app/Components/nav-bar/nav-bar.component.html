@@ -1,8 +1,9 @@
 <div
-  class="d-flex justify-content-between bg-light align-items-center container-fluid"
+  class="nabBarSection d-flex justify-content-between bg-light align-items-center"
+  id="top"
 >
   <div>
-    <a class="navbar-brand navbar-expand-lg logo" routerLink="/home">
+    <a class="navbar-brand navbar-expand-lg logo mx-4" routerLink="/home">
       <img
         src="../../../assets/images/japanese-food.png"
         alt="logo"
@@ -37,19 +38,35 @@
     <button
       class="btn navButton"
       aria-current="page"
-      routerLink="/about"
+      routerLink="/menu"
       [routerLinkActive]="['active']"
     >
-      About
+      Menu
     </button>
 
     <button
       class="btn navButton"
       aria-current="page"
-      routerLink="/menu"
+      routerLink="/fav"
       [routerLinkActive]="['active']"
     >
-      Menu
+      Favourate
+    </button>
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/blog"
+      [routerLinkActive]="['active']"
+    >
+      Blog
+    </button>
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/about"
+      [routerLinkActive]="['active']"
+    >
+      About
     </button>
 
     <button
@@ -60,28 +77,51 @@
     >
       Contact us
     </button>
-    <a routerLink="/cart">
+  </div>
+
+  <div class="nav nav-pills justify-content-center p-3">
+    <a routerLink="/cart" class="text-center btn position-relative">
+      <span
+        class="position-absolute top-25 start-10 translate-middle bg-danger border border-light rounded-circle text-white py-0 px-2 text-center"
+        style="font-weight: 900; font-size: 20px"
+      >
+        <span class="visually">{{ totalCardsNow }}</span>
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
+        width="24"
+        height="24"
         fill="currentColor"
         class="bi bi-cart m-2"
         viewBox="0 0 16 16"
       >
         <path
           d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
-        /></svg
-    ></a>
-  </div>
-  <div class="">
-    <button
-      class="btn signButton"
-      aria-current="page"
-      routerLink="/sign"
-      [routerLinkActive]="['activesignup']"
-    >
-      SignUp
-    </button>
+        />
+      </svg>
+    </a>
+    <div class="">
+      <button
+        *ngIf="!profilePicture"
+        class="btn"
+        aria-current="page"
+        id="google-btn"
+      ></button>
+
+      <div *ngIf="profilePicture" class="ProfileSection">
+        <div class="profile">
+          <img
+            [src]="profilePicture"
+            alt="profile avatar"
+            routerLink="/profile"
+            style="cursor: pointer"
+          />
+        </div>
+
+        <button class="btn signOut" id="signOutButton" (click)="signOut()">
+          Sign out
+        </button>
+      </div>
+    </div>
   </div>
 </div>

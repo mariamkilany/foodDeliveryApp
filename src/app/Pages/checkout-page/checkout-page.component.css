@@ -1,0 +1,12 @@
+.checkout-layout {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.checkout-layout>div {
+  flex-grow: 1;
+}
+
+.checkout-layout>div:first-child {
+  flex-grow: 3;
+}

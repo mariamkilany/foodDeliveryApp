@@ -1,0 +1,19 @@
+<div class="container rounded-3 mt-3">
+  @for (fav of allFavorites; track fav.id) {
+  <div class="w-50 bg-light m-auto mb-3 rounded-5 overflow-hidden">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div>
+          <img [src]="fav.image" width="100%" />
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8">
+        <p>{{ fav.name }}</p>
+        <p>
+          Price : <span class="text-danger">{{ 500 | currency }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

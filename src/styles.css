@@ -1,5 +1,4 @@
 :root {
-
   --main-color: #AD343E;
   --secondary-color: white;
   --btn-color-hover: #81282f;
@@ -9,8 +8,12 @@
 
 * {
   font-family: "Playfair Display", serif;
+
 }
 
 #g_a11y_announcement {
   display: none;
+/*   margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
 }

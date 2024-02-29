@@ -1,0 +1,58 @@
+.readBtn {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+}
+
+.readBtn:hover,
+.readBtn:active {
+  background-color: var(--btn-color-hover);
+  color: var(--secondary-color);
+}
+
+.leftBlog {
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.leftBlog:hover {
+  box-shadow: 0px 0px 10px 0px var(--main-color);
+  transform: scale(1.05);
+
+}
+
+.blogInfo {
+  background-color: var(--secondary-color);
+}
+
+.blogInfo span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.blogInfo h6 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.blogInfo p {
+  font-size: 15px;
+}
+
+.rightHeader {
+  font-size: 14px !important;
+}

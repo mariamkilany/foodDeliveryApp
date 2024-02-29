@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Order Summary</h3>
+  @for (item of cart; track item.id) {
+  <app-summary-item [item]="item"></app-summary-item>
+  }
+  <div class="summary">
+    <p><span>Subtotal:</span> $ {{ totalPayment }}</p>
+    <p><span>Shipping:</span> $ 50</p>
+    <hr />
+    <p class="total"><span>Total:</span>$ {{ totalPayment }}</p>
+  </div>
+</div>
