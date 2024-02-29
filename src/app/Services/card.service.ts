@@ -8,12 +8,14 @@ import { tap } from 'rxjs/operators';
 })
 export class CardService {
   constructor(private HttpClient: HttpClient) {
-    this.getCard(
-      JSON.parse(sessionStorage.getItem('loggedInUser') || '{}').email
-    ).subscribe((data) => {
-      this.cartItems = data;
-      this.cartLengthSubject.next(this.cartItems.length);
-    });
+    if (sessionStorage.getItem('loggedInUser') !== null) {
+      this.getCard(
+        JSON.parse(sessionStorage.getItem('loggedInUser') || '{}').email
+      ).subscribe((data) => {
+        this.cartItems = data;
+        this.cartLengthSubject.next(this.cartItems.length);
+      });
+    }
   }
 
   private cartItems: any = [];
@@ -58,13 +60,12 @@ export class CardService {
     );
   }
 
-
   updateCart(product: any) {
     return this.HttpClient.put(
       `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/${product.id}`,
       product
     );
-    }
+  }
   updateAllCard(cart: any) {
     const updatePromises = cart.map((item: any) =>
       this.HttpClient.put(

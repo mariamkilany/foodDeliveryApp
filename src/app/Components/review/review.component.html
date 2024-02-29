@@ -3,7 +3,12 @@
   class="review p-2 row-gap-2 d-flex flex-column border border-3 rounded-3 position-relative bg-light"
 >
   <div class="d-flex column-gap-1 align-items-center justify-content-between">
-    <img [src]="review.avatar" class="rounded-circle avatar" alt="avatar" />
+    <img
+      [src]="review.avatar"
+      class="rounded-circle avatar"
+      alt="avatar"
+      loading="lazy"
+    />
     <div>
       <h5 class="mb-0">{{ review.userName }}</h5>
       <span class="fs-6 text-lowercase text-secondary text-center">{{

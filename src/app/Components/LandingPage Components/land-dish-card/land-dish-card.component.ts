@@ -19,15 +19,15 @@ export class LandDishCardComponent implements OnInit {
   ngOnInit() {
     this.mealsService.getRandomMeal().subscribe((data: any) => {
       this.meal1 = data.meals[0];
-      this.meal1.name = this.meal1.strMeal.slice(0, 16);
+      this.meal1.name = this.meal1?.strMeal.slice(0, 16);
     });
     this.mealsService.getRandomMeal().subscribe((data: any) => {
       this.meal2 = data.meals[0];
-      this.meal2.name = this.meal2.strMeal.slice(0, 16);
+      this.meal2.name = this.meal2?.strMeal.slice(0, 16);
     });
     this.mealsService.getRandomMeal().subscribe((data: any) => {
       this.meal3 = data.meals[0];
-      this.meal3.name = this.meal3.strMeal.slice(0, 16);
+      this.meal3.name = this.meal3?.strMeal.slice(0, 16);
     });
   }
 }
