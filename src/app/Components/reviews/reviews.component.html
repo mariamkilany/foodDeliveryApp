@@ -1,0 +1,76 @@
+<div>
+  <h3 class="text-center my-3">Customers Reviews</h3>
+  @if(reviews){
+  <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      @for (reviewArr of reviews; track $index) {
+      <div class="carousel-item" [class.active]="$index === 0">
+        <div class="row justify-content-center">
+          @for (review of reviewArr ; track $index) {
+          <app-review class="col-md-3"></app-review>
+          }
+        </div>
+      </div>
+      }
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleSlidesOnly"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon">
+        <i class="bi bi-caret-left-fill" style="color: var(--info-color)"></i>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleSlidesOnly"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon">
+        <i class="bi bi-caret-right-fill" style="color: var(--info-color)"></i>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  } @else {
+  <div class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  }
+  <div class="p-3 mt-3" style="background-color: var(--info-color)">
+    <h5 class="text-light text-center">Add Your Review</h5>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-10">
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea"
+            [(ngModel)]="review"
+          ></textarea>
+          <label for="floatingTextarea">Review</label>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn rounded-circle col-1 d-flex justify-content-center align-items-center"
+        style="
+          background-color: var(--main-color);
+          width: fit-content;
+          height: fit-content;
+        "
+        (click)="addReview()"
+      >
+        <i class="bi bi-send-fill" style="color: white"></i>
+      </button>
+    </div>
+  </div>
+</div>
