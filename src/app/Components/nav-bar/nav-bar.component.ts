@@ -28,11 +28,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.cardService.getCard(this.userEmail).subscribe({
-      next: (cards: any) => {
-        this.totalCardsNow = cards.length;
-      },
-      error: (err) => console.error(err),
+    this.cardService.getCartLength().subscribe((length) => {
+      // console.log('length: ', length);
+      this.totalCardsNow = length;
+      // console.log("Cart Length",this.totalCardsNow);
     });
   }
 

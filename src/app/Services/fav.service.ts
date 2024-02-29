@@ -20,6 +20,11 @@ export class FavService {
     return favoritesString ? JSON.parse(favoritesString) : [];
   }
 
+  getProductFromLocalStorage(id: any): any {
+    let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    return favorites.find((e: any) => e.id == id);
+  }
+
   getAllFavorites(): any[] {
     let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
     return favorites;

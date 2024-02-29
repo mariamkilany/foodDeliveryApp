@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './dish.component.html',
   styleUrl: './dish.component.css',
 })
-export class DishComponent {
+export class DishComponent implements OnInit {
   @Input() meal: any;
   userEmail: string = JSON.parse(sessionStorage.getItem('loggedInUser') || '{}')
     ?.email;
@@ -24,7 +24,16 @@ export class DishComponent {
     private favoriteService: FavService
   ) {}
 
+  ngOnInit(): void {
+    // console.log('isProductInFav: ', this.isProductInFav);
+  }
+
+  isProductInFav() {
+    return this.favoriteService.getProductFromLocalStorage(this.meal.idMeal);
+  }
+
   addToCart() {
+
     const toastLiveExample = document.getElementById('liveToast');
     toastLiveExample?.classList.add('show');
     this.cardService
