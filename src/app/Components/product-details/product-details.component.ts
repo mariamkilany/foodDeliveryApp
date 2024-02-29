@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { MealsService } from '../../Services/meals.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CardService } from '../../Services/card.service';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
-  providers: [MealsService],
+  providers: [MealsService, CardService],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
 })
@@ -16,7 +17,11 @@ export class ProductDetailsComponent implements OnInit {
   ID = 0;
   Meal: any;
 
-  constructor(MyActivated: ActivatedRoute, private mealsService: MealsService) {
+  constructor(
+    MyActivated: ActivatedRoute,
+    private mealsService: MealsService,
+    private cardService: CardService
+  ) {
     this.ID = MyActivated.snapshot.params['id'];
   }
 
@@ -27,5 +32,25 @@ export class ProductDetailsComponent implements OnInit {
         console.log(this.Meal);
       },
     });
+  }
+
+  addToCart() {
+    window.alert('Your product has been added to the cart!');
+    this.cardService
+      .createCard({
+        date: new Date(),
+        mealId: this.Meal.idMeal,
+        mealName: this.Meal.strMeal,
+        mealThumb: this.Meal.strMealThumb,
+        userEmail: 'fady@gmail.com',
+        completed: false,
+        quantity: 1,
+        price: 500,
+      })
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+      });
   }
 }

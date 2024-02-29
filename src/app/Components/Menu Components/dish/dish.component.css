@@ -35,9 +35,10 @@
 
 }
 
-.mealInfo .title h6,.mealInfo .title svg:hover{
-    color: var(--main-color);
-    font-weight: 600;
+.mealInfo .title h6,
+.mealInfo .title svg:hover {
+  color: var(--main-color);
+  font-weight: 600;
 }
 
 .mealInfo p {
@@ -97,4 +98,10 @@
 
 .price {
   color: #38761D;
+}
+
+
+.change {
+  fill: var(--main-color);
+  stroke: var(--main-color);
 }

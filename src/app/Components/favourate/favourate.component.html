@@ -1,20 +1,19 @@
-<div class="container rounded-3 mt-5">
-  <div class="w-50 bg-light m-auto">
+<div class="container rounded-3 mt-3">
+  @for (fav of allFavorites; track fav.id) {
+  <div class="w-50 bg-light m-auto mb-3 rounded-5 overflow-hidden">
     <div class="row">
       <div class="col-sm-12 col-md-4">
         <div>
-          <img src="../../../assets/images/eggplate.jpg" width="100%" />
+          <img [src]="fav.image" width="100%" />
         </div>
       </div>
       <div class="col-sm-12 col-md-8">
-        <p>Title</p>
+        <p>{{ fav.name }}</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium,
-          cum! Cupiditate at eius voluptatibus inventore minima similique, vel
-          blanditiis iste necessitatibus sed facilis reiciendis, praesentium
-          quasi facere omnis quam nobis.
+          Price : <span class="text-danger">{{ 500 | currency }}</span>
         </p>
       </div>
     </div>
   </div>
+  }
 </div>

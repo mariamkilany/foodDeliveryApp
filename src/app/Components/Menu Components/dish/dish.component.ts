@@ -7,14 +7,17 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dish',
   standalone: true,
-  imports: [RouterModule,CommonModule],
-  providers: [CardService,FavService],
+  imports: [RouterModule, CommonModule, RouterModule],
+  providers: [CardService, FavService],
   templateUrl: './dish.component.html',
   styleUrl: './dish.component.css',
 })
 export class DishComponent {
   @Input() meal: any;
-  constructor(private cardService: CardService,private favoriteService: FavService) {}
+  constructor(
+    private cardService: CardService,
+    private favoriteService: FavService
+  ) {}
 
   addToCart() {
     window.alert('Your product has been added to the cart!');
@@ -39,7 +42,7 @@ export class DishComponent {
     let elem = e.target;
     elem.classList.toggle('change');
   }
-  
+
   addToFavorites(item: any): void {
     this.favoriteService.saveFavorite('favorites', item);
     // console.log(item);

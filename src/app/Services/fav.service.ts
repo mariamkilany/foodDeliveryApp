@@ -8,12 +8,11 @@ export class FavService {
     let favorites = this.getFavorites(key);
     const index = favorites.findIndex((i) => i.id === item.id);
     if (index === -1) {
-    favorites.push(item);}
-    else{
-      favorites = favorites.filter((favorite: any) => favorite.id !== item.id); 
+      favorites.push(item);
+    } else {
+      favorites = favorites.filter((favorite: any) => favorite.id !== item.id);
     }
     localStorage.setItem(key, JSON.stringify(favorites));
-    
   }
 
   getFavorites(key: string): any[] {
@@ -21,9 +20,14 @@ export class FavService {
     return favoritesString ? JSON.parse(favoritesString) : [];
   }
 
+  getAllFavorites(): any[] {
+    let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    return favorites;
+  }
+
   removeFavorite(key: string, item: any): void {
     let favorites = this.getFavorites(key);
-    favorites = favorites.filter((favorite: any) => favorite.id !== item.id); 
+    favorites = favorites.filter((favorite: any) => favorite.id !== item.id);
     localStorage.setItem(key, JSON.stringify(favorites));
   }
 }

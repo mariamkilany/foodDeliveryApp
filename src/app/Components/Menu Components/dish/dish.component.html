@@ -1,6 +1,6 @@
 <div class="mb-5">
   <div class="meal">
-    <div class="mealImage">
+    <div class="mealImage" routerLink="/details/{{ meal.idMeal }}">
       <img [src]="meal.strMealThumb" alt="mealImage" loading="lazy" />
     </div>
     <div class="mealInfo">
@@ -8,7 +8,12 @@
         <h6>{{ meal.strMeal }}</h6>
         <a
           class="btn fav"
-          (click)="addToFavorites({ id: '1', name: 'ali' })"
+          (click)="addToFavorites({
+            id: meal.idMeal,
+            name: meal.strMeal,
+            image: meal.strMealThumb,
+            price: 500,
+          })"
           (click)="togglefav($event)"
         >
           <svg
