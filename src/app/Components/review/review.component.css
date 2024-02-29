@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
-  rotate: 3deg;
+  rotate: 10deg;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -13,4 +13,20 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+.avatar {
+  width: 60px;
+}
+
+.review_input {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  min-height: 80px;
+  width: 100%;
+}
+
+.hide {
+  visibility: hidden !important;
 }
