@@ -8,9 +8,15 @@ import { FooterComponent } from './Components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,NavBarComponent,LandingPageComponent,FooterComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    NavBarComponent,
+    LandingPageComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'foodDeliverApp';

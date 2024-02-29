@@ -1,72 +1,77 @@
-
 .meal {
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-    border-radius: 11px;
-    overflow: hidden;
-    transition: all 0.4s;
-  }
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
 
-  .meal:hover {
-    transform: translateY(-1.2rem);
-    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
-  }
-  
-  .mealInfo {
-    padding: 25px 20px;
-  }
-  .mealImage img{
-    width: 100%;
-  }
-  
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.mealInfo {
+  padding: 25px 20px;
+}
+.mealImage img {
+  width: 100%;
+}
+
 .mealInfo .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.3rem;
-    margin-bottom: 6px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
 }
-.mealInfo .title h6{
-    color: var(--main-color);
-    font-weight: 600;
-
-
+.mealInfo .title h6 {
+  color: var(--main-color);
+  font-weight: 600;
 }
 
-.mealInfo .title svg:hover{
-    color: var(--main-color);
-
+.mealInfo .title svg:hover {
+  color: var(--main-color);
 }
-.mealInfo  p {
-    text-align: left;
-    font-size: 0.85rem;
+.mealInfo p {
+  text-align: left;
+  font-size: 0.85rem;
 }
-.mealInfo  span {
-    font-size: 0.9rem;
+.mealInfo span {
+  font-size: 0.9rem;
 }
-.mealInfo  span:first-child{
-    color: var(--main-color);
-    font-weight: 800;
+.mealInfo span:first-child {
+  color: var(--main-color);
+  font-weight: 800;
 }
-.mealInfo  svg{
-    margin-right: 5px;
+.mealInfo {
+  margin-right: 5px;
 }
 .mealInfo button {
-    color: var(--secondary-color);
-    background-color: var(--main-color);
-    width: 100%;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
-.mealInfo button:hover{
-    background-color: var(--btn-color-hover);
+.mealInfo button:hover {
+  background-color: var(--btn-color-hover);
 }
 .rate {
-    color: #FFD934;
+  color: #ffd934;
 }
-.price{
-    color: #38761D;
+.price {
+  color: #38761d;
+}
+
+.fav:active {
+  color: var(--main-color);
+}
+/* .active {
+   color: var(--main-color);
+}  */
+.change {
+  fill: var(--main-color);
 }
