@@ -21,17 +21,7 @@ export class CartComponent implements OnInit {
     this.user = JSON.parse(sessionStorage.getItem('loggedInUser') || '');
   }
 
-  // getCart() {
-  //   return this.http.get(
-  //     'https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem?userEmail=fady@gmail.com&completed=false'
-  //   );
-  // }
-
   ngOnInit() {
-    // this.getCart().subscribe((data) => {
-    //   console.log(data);
-    //   this.cart = data;
-    // });
     this.cartService.getCard(this.user.email).subscribe((data) => {
       console.log('data: ', data);
       this.cart = data;
@@ -40,20 +30,21 @@ export class CartComponent implements OnInit {
 
   increaseQuantity(product: any) {
     product.quantity++;
-    console.log(this.cart);
+    this.cartService.updateCart(product).subscribe((data) => {
+    });
   }
 
   decreaseQuantity(product: any) {
     if (product.quantity > 1) {
       product.quantity--;
-      console.log(this.cart);
+      this.cartService.updateCart(product).subscribe((data) => {
+      });
     }
   }
 
   removeItem(index: number, id: number) {
     this.cart.splice(index, 1);
     this.cartService.removeFromCart(id).subscribe((data) => {
-      console.log(data);
     });
   }
 

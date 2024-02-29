@@ -7,19 +7,18 @@
       <div class="title">
         <h6>{{ meal.strMeal }}</h6>
         <a
-          class="btn fav"
+          class="btn fav border-0"
           (click)="addToFavorites({
             id: meal.idMeal,
             name: meal.strMeal,
             image: meal.strMealThumb,
             price: 500,
-          })"
-          (click)="togglefav($event)"
+          });togglefav($event)"
         >
           <svg
-            class="change"
             xmlns="http://www.w3.org/2000/svg"
             width="25"
+            [class.change]="isProductInFav()"
             height="25"
             fill="currentColor"
             class="bi bi-bookmark-heart"
