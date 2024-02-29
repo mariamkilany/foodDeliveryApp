@@ -1,19 +1,37 @@
-  <div
-    class=" nabBarSection d-flex justify-content-between bg-light align-items-center"
-  >
-
-    <div>
-      <a class="navbar-brand navbar-expand-lg logo" routerLink="/home">
-        <img
-          src="../../../assets/images/japanese-food.png"
-          alt="logo"
-          width="30"
-          height="24"
-        />
-        Bistro Bliss</a
-      >
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<div
+  class=" nabBarSection d-flex justify-content-between bg-light align-items-center"
+>
+  <div>
+    <a class="navbar-brand navbar-expand-lg logo" routerLink="/home">
+      <img
+        src="../../../assets/images/japanese-food.png"
+        alt="logo"
+        width="30"
+        height="24"
+      />
+      Bistro Bliss</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <div class="nav nav-pills justify-content-center p-3">
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/home"
+      [routerLinkActive]="['active']"
+    >
+      Home
     </button>
     </div>
   
@@ -46,120 +64,28 @@
         Menu
       </button>
 
-      <button
-        class="btn navButton"
-        aria-current="page"
-        routerLink="/contact"
-        [routerLinkActive]="['active']"
-      >
-        Contact us
-      </button>
-    <a
-    routerLink="/cart"> <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-cart m-2"
-        viewBox="0 0 16 16"
-        
-      >
-        <path
-          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
-        />
-      </svg></a>
-    </div>
 
-    <div class="">
-
-      <button 
-        *ngIf="!profilePicture"
-        class="btn"
-        aria-current="page"
-        id="google-btn"
-      >
-      </button>
-  
-  
-      <div 
-      *ngIf="profilePicture"
-      class="ProfileSection">
-        <div class="profile">
-          <img [src]="profilePicture" alt="profile avatar">
-        </div>
-       
-        <button
-        class="btn signOut" id="signOutButton" (click)="signOut()">
-          Sign out
-      </button>
-  
-      </div>
-      
-  
-  
-    </div>
-    
-    <!-- <div
-    class="fixed-top d-flex justify-content-between bg-light align-items-center container-fluid"
-  >
-  
-    <div>
-      <a class="navbar-brand navbar-expand-lg logo" routerLink="/home">
-        <img
-          src="../../../assets/images/japanese-food.png"
-          alt="logo"
-          width="30"
-          height="24"
-        />
-        Bistro Bliss</a
-      >
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/contact"
+      [routerLinkActive]="['active']"
+    >
+      Contact us
     </button>
-    </div>
-   
-    
-    <div class="nav nav-pills justify-content-center p-3">
-      <button
-        class="btn navButton"
-        aria-current="page"
-        routerLink="/home"
-        [routerLinkActive]="['active']"
-      >
-        Home
-      </button>
-  
-      <button
-        class="btn navButton"
-        aria-current="page"
-        routerLink="/about"
-        [routerLinkActive]="['active']"
-      >
-        About
-      </button>
-  
-      <button
-        class="btn navButton"
-        aria-current="page"
-        routerLink="/menu"
-        [routerLinkActive]="['active']"
-      >
-        Menu
-      </button>
-  
-      <button
-        class="btn navButton"
-        aria-current="page"
-        routerLink="/contact"
-        [routerLinkActive]="['active']"
-      >
-        Contact us
-      </button>
-     <a
-     routerLink="/cart"> <svg
+    <button
+      class="btn navButton"
+      aria-current="page"
+      routerLink="/fav"
+      [routerLinkActive]="['active']"
+    >
+      Favourate
+    </button>
+    <a routerLink="/cart" class="text-center btn">
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
+        width="20"
+        height="20"
         fill="currentColor"
         class="bi bi-cart m-2"
         viewBox="0 0 16 16"
@@ -168,8 +94,6 @@
         <path
           d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
         />
-      </svg></a>
-    </div>
     <div class="">
 
       <button 
@@ -193,11 +117,6 @@
           Sign out
       </button>
   
-      </div>
-      
-  
-  
+      </div>  
     </div>
-  </div> -->
-  
   </div>
