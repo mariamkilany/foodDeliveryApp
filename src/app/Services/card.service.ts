@@ -19,4 +19,11 @@ export class CardService {
       data
     );
   }
+
+  updateCard(id: string, data: any) {
+    return this.HttpClient.put(
+      `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/${id}`,
+      data
+    );
+  }
 }
