@@ -11,6 +11,7 @@ export class FavService {
       favorites.push(item);
     } else {
       favorites = favorites.filter((favorite: any) => favorite.id !== item.id);
+      console.log(favorites);
     }
     localStorage.setItem(key, JSON.stringify(favorites));
   }
