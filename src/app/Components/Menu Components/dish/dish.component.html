@@ -1,14 +1,11 @@
 <div class="mb-5">
   <div class="meal">
     <div class="mealImage">
-      <img
-        src="../../../../assets/images/pexels-daniela-constantini-5591664 1.jpg"
-        alt="mealImage"
-      />
+      <img [src]="meal.strMealThumb" alt="mealImage" />
     </div>
     <div class="mealInfo">
       <div class="title">
-        <h6>Fried Eggs</h6>
+        <h6>{{ meal.strMeal }}</h6>
         <a
           class="btn fav"
           (click)="addToFavorites({ id: '1', name: 'ali' })"
@@ -34,7 +31,15 @@
           </svg>
         </a>
       </div>
-      <p>Made with eggs, lettuce, salt, oil and other ingredients.</p>
+      <p>Main Ingredients:<br /></p>
+
+      <div class="ingredients">
+        <p class="main-ingredient">#{{ meal.strIngredient1 }}</p>
+        <p class="main-ingredient">#{{ meal.strIngredient2 }}</p>
+        <p class="main-ingredient">#{{ meal.strIngredient3 }}</p>
+        <p class="main-ingredient">#{{ meal.strIngredient4 }}</p>
+        <p class="main-ingredient">#{{ meal.strIngredient5 }}</p>
+      </div>
       <div class="row">
         <div class="col-sm-12 col-md-6 mb-4">
           <span> Rating (537) </span>

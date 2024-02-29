@@ -5,6 +5,7 @@ import { LandDeliverComponent } from '../../Components/LandingPage Components/la
 import { CustomersSayComponent } from '../../Components/LandingPage Components/customers-say/customers-say.component';
 import { LandDishCardComponent } from '../../Components/LandingPage Components/land-dish-card/land-dish-card.component';
 import { AuthService } from '../../Services/auth.service';
+import { BlogComponent } from '../../Components/LandingPage Components/blog/blog.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,19 +14,11 @@ import { AuthService } from '../../Services/auth.service';
     AboutComponent,
     LandDeliverComponent,
     CustomersSayComponent,
-    LandDishCardComponent],
+    LandDishCardComponent , BlogComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
-  // auth = inject(AuthService);
-  // name = JSON.parse(sessionStorage.getItem("loggedInUser")!).name;
-  // userProfileImage =JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
-  // userEmail =JSON.parse(sessionStorage.getItem("loggedInUser")!).email;
-  
-  // signOut(){
 
-  //   sessionStorage.removeItem("loggedInUser");
-  //   this.auth.signOut();
-  // }
+
 }

@@ -13,8 +13,10 @@
 .mealInfo {
   padding: 25px 20px;
 }
+
 .mealImage img {
   width: 100%;
+  height: 250px;
 }
 
 .mealInfo .title {
@@ -23,29 +25,57 @@
   align-items: center;
   font-size: 1.3rem;
   margin-bottom: 6px;
+
 }
+
 .mealInfo .title h6 {
   color: var(--main-color);
   font-weight: 600;
+
+
 }
 
-.mealInfo .title svg:hover {
-  color: var(--main-color);
+.mealInfo .title h6,.mealInfo .title svg:hover{
+    color: var(--main-color);
+    font-weight: 600;
 }
+
 .mealInfo p {
   text-align: left;
   font-size: 0.85rem;
 }
+
 .mealInfo span {
   font-size: 0.9rem;
 }
+
 .mealInfo span:first-child {
   color: var(--main-color);
   font-weight: 800;
 }
-.mealInfo {
+
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75px;
+  align-items: start;
+}
+
+.mealInfo .main-ingredient {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.mealInfo svg {
   margin-right: 5px;
 }
+
 .mealInfo button {
   color: var(--secondary-color);
   background-color: var(--main-color);
@@ -56,22 +86,15 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
 .mealInfo button:hover {
   background-color: var(--btn-color-hover);
 }
+
 .rate {
-  color: #ffd934;
-}
-.price {
-  color: #38761d;
+  color: #FFD934;
 }
 
-.fav:active {
-  color: var(--main-color);
-}
-/* .active {
-   color: var(--main-color);
-}  */
-.change {
-  fill: var(--main-color);
+.price {
+  color: #38761D;
 }
