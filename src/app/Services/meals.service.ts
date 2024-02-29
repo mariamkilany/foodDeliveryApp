@@ -13,8 +13,9 @@ const getMeals = async (letter: string) => {
 })
 export class MealsService {
   URLCATEGORIES = 'https://www.themealdb.com/api/json/v1/1/categories.php';
-   private URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
-  
+  URLRANDOM = 'https://www.themealdb.com/api/json/v1/1/random.php';
+  private URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php';
+
   constructor(private http: HttpClient) {}
 
   getAllCategories() {
@@ -32,5 +33,9 @@ export class MealsService {
 
   getMealsById(id: any) {
     return this.http.get(this.URL + '?i=' + id);
+  }
+
+  getRandomMeal() {
+    return this.http.get(this.URLRANDOM);
   }
 }

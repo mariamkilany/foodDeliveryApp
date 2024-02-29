@@ -66,3 +66,9 @@ textarea {
     padding: 40px 10px;
     margin: auto;
 }
+
+@media (max-width:1000px) {
+    .contactForm{
+        width: 95%;
+    }
+}

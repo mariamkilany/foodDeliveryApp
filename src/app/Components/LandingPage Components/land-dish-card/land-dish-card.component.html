@@ -1,76 +1,59 @@
 <div class="container">
   <div class="pt-5 pb-5">
     <div class="dishesTitle">
-      <h3>Our Signature Foods</h3>
+      <h3>{{ meal1.strMeal }}</h3>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card">
+        <div class="card" [title]="meal1.strMeal">
           <div class="card__image">
-            <img
-              src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="Salad"
-            />
+            <img [src]="meal1.strMealThumb" alt="Salad" />
           </div>
           <div class="card__info">
             <div class="car__info--title">
-              <h3>Salad</h3>
-              <p>Fresh & sweet</p>
+              <h3>{{ meal1.name }}</h3>
+              <p>{{ meal1.strIngredient1 }} & {{ meal1.strIngredient2 }}</p>
             </div>
             <div class="card__info--price">
-              <p>$ 5</p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
+              <p>{{ 500 | currency }}</p>
               <span class="fa fa-star checked"></span>
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card">
+        <div class="card" [title]="meal2.strMeal">
           <div class="card__image">
-            <img
-              src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="Salad"
-            />
+            <img [src]="meal2.strMealThumb" alt="Salad" />
           </div>
           <div class="card__info">
             <div class="car__info--title">
-              <h3>Salad</h3>
-              <p>Fresh & sweet</p>
+              <h3>
+                {{ meal2.name }}
+              </h3>
+              <p>{{ meal2.strIngredient1 }} & {{ meal2.strIngredient2 }}</p>
             </div>
             <div class="card__info--price">
-              <p>$ 5</p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
+              <p>{{ 500 | currency }}</p>
               <span class="fa fa-star checked"></span>
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card">
+        <div class="card" [title]="meal3.strMeal">
           <div class="card__image">
-            <img
-              src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="Salad"
-            />
+            <img [src]="meal3.strMealThumb" alt="Salad" />
           </div>
           <div class="card__info">
             <div class="car__info--title">
-              <h3>Salad</h3>
-              <p>Fresh & sweet</p>
+              <h3>
+                {{ meal3.name }}
+              </h3>
+              <p>{{ meal3.strIngredient1 }} & {{ meal3.strIngredient2 }}</p>
             </div>
             <div class="card__info--price">
-              <p>$ 5</p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
+              <p>{{ 500 | currency }}</p>
               <span class="fa fa-star checked"></span>
             </div>
           </div>

@@ -30,6 +30,12 @@ export class CardService {
     );
   }
 
+  getCardBoth(userEmail: string) {
+    return this.HttpClient.get(
+      `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem?userEmail=${userEmail}`
+    );
+  }
+
   removeFromCart(id: number) {
     return this.HttpClient.delete(
       'https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/' + id
@@ -52,10 +58,30 @@ export class CardService {
     );
   }
 
+
   updateCart(product: any) {
     return this.HttpClient.put(
       `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/${product.id}`,
       product
     );
+
+  updateAllCard(cart: any) {
+    const updatePromises = cart.map((item: any) =>
+      this.HttpClient.put(
+        `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/${item.id}`,
+        {
+          ...item,
+          completed: true,
+        }
+      ).toPromise()
+    );
+
+    Promise.all(updatePromises)
+      .then(() => {
+        console.log('All updates successful');
+      })
+      .catch((error) => {
+        console.error('There was an error during the update', error);
+      });
   }
 }
