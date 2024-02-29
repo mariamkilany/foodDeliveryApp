@@ -7,6 +7,6 @@
     <p><span>Quantity:</span> {{ item.quantity }}</p>
   </div>
   <div class="item-price">
-    <p>${{ item.price }}</p>
+    <p>{{ item.price | currency }}</p>
   </div>
 </div>

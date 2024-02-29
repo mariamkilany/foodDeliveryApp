@@ -4,8 +4,8 @@
   <app-summary-item [item]="item"></app-summary-item>
   }
   <div class="summary">
-    <p><span>Subtotal:</span> $ {{ totalPayment }}</p>
-    <p><span>Shipping:</span> $ 50</p>
+    <p><span>Subtotal:</span> {{ totalPayment | currency }}</p>
+    <p><span>Shipping:</span> {{ 50 | currency }}</p>
     <hr />
     <p class="total"><span>Total:</span>$ {{ totalPayment }}</p>
   </div>

@@ -27,6 +27,7 @@ export class TableComponent {
         this.cartItems = this.cartItems.map((item) => {
           item.date = new Date(item.date).toDateString();
           item.completed = item.completed ? 'Paid' : 'Pending';
+          item.price = item.price * item.quantity;
           return item;
         });
       },
