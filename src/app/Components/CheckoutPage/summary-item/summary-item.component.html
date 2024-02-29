@@ -1,0 +1,12 @@
+<div class="item">
+  <div>
+    <img [src]="item.mealThumb" alt="product" />
+  </div>
+  <div class="item-details">
+    <h4>{{ item.mealName }}</h4>
+    <p><span>Quantity:</span> {{ item.quantity }}</p>
+  </div>
+  <div class="item-price">
+    <p>${{ item.price }}</p>
+  </div>
+</div>

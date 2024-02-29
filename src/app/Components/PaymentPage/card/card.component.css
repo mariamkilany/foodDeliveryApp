@@ -1,0 +1,20 @@
+.card {
+  background-color: var(--info-color);
+  color: var(--secondary-color);
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border: 5px solid transparent;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background-color: var(--secondary-color);
+  color: var(--info-color);
+  border: 2px solid var(--info-color);
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}

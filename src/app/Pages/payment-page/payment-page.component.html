@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="cards-layout">
+    <app-card
+      [title]="cartAnalysis.totalPayment"
+      [content]="'total amount of payment'"
+    ></app-card>
+    <app-card
+      [title]="cartAnalysis.totalCompleted"
+      [content]="'Completed Items'"
+    ></app-card>
+    <app-card
+      [title]="cartAnalysis.totalUnCompleted"
+      [content]="'UnCompleted Items'"
+    ></app-card>
+    <app-card
+      [title]="cartAnalysis.averagePayment"
+      [content]="'Average Payment'"
+    ></app-card>
+  </div>
+  <p class="payment-header">
+    Previous Payments<span>| {{ cartAnalysis.totalItems }} Payments</span>
+  </p>
+  <app-table></app-table>
+</div>
