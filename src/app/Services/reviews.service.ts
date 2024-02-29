@@ -13,4 +13,7 @@ export class ReviewsService {
   getMealReviews(id: string) {
     return this.http.get(this.URL + '?mealId=' + id);
   }
+  updateUserReview(id: string, comment: string) {
+    return this.http.put(this.URL + '/' + id, { comment });
+  }
 }
