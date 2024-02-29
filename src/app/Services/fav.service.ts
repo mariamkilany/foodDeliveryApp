@@ -1,22 +1,29 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FavService {
-
-  constructor() { }
-  
-  saveItem(key: string, item: any): void {
-    localStorage.setItem(key, JSON.stringify(item));
+  saveFavorite(key: string, item: any): void {
+    let favorites = this.getFavorites(key);
+    const index = favorites.findIndex((i) => i.id === item.id);
+    if (index === -1) {
+    favorites.push(item);}
+    else{
+      favorites = favorites.filter((favorite: any) => favorite.id !== item.id); 
+    }
+    localStorage.setItem(key, JSON.stringify(favorites));
+    
   }
 
-  getItem(key: string): any {
-    const item = localStorage.getItem(key);
-    return item ? JSON.parse(item) : null;
+  getFavorites(key: string): any[] {
+    const favoritesString = localStorage.getItem(key);
+    return favoritesString ? JSON.parse(favoritesString) : [];
   }
 
-  removeItem(key: string): void {
-    localStorage.removeItem(key);
+  removeFavorite(key: string, item: any): void {
+    let favorites = this.getFavorites(key);
+    favorites = favorites.filter((favorite: any) => favorite.id !== item.id); 
+    localStorage.setItem(key, JSON.stringify(favorites));
   }
 }
