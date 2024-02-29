@@ -8,7 +8,12 @@
 
 * {
   font-family: "Playfair Display", serif;
-  margin: 0;
+
+}
+
+#g_a11y_announcement {
+  display: none;
+/*   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }

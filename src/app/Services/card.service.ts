@@ -9,7 +9,13 @@ export class CardService {
 
   getCard(userEmail: string) {
     return this.HttpClient.get(
-      `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem?userEmail=${userEmail}`
+      `https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem?userEmail=${userEmail}&completed=false`
+    );
+  }
+
+  removeFromCart(id: number) {
+    return this.HttpClient.delete(  
+      'https://65def281ff5e305f32a0f1bd.mockapi.io/cartItem/' + id
     );
   }
 

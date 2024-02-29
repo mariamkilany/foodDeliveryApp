@@ -20,13 +20,13 @@ export class ReviewsComponent implements OnInit {
     private activeRoute: ActivatedRoute
   ) {}
   auth = inject(AuthService);
-  name = JSON.parse(sessionStorage.getItem('loggedInUser')!).name;
+  name = JSON.parse(sessionStorage.getItem('loggedInUser')!)?.name;
   userProfileImage = JSON.parse(sessionStorage.getItem('loggedInUser')!)
-    .picture;
-  userEmail = JSON.parse(sessionStorage.getItem('loggedInUser')!).email;
+    ?.picture;
+  userEmail = JSON.parse(sessionStorage.getItem('loggedInUser')!)?.email;
 
   review = '';
-  reviews: any;
+  reviews: any = [];
   id: any;
 
   ngOnInit(): void {
@@ -35,25 +35,30 @@ export class ReviewsComponent implements OnInit {
   }
 
   addReview() {
-    this.reviewsService
-      .addMealReview({
-        comment: this.review,
-        userEmail: this.userEmail,
-        avatar: this.userProfileImage,
-        rating: 4,
-        userName: this.name,
-        mealId: this.id,
-      })
-      .subscribe({
-        next: () => {
-          this.review = '';
-          this.reviews = null;
-          this.getReviews();
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });
+    if (this.name) {
+      this.reviewsService
+        .addMealReview({
+          comment: this.review,
+          userEmail: this.userEmail,
+          avatar: this.userProfileImage,
+          rating: 4,
+          userName: this.name,
+          mealId: this.id,
+        })
+        .subscribe({
+          next: () => {
+            this.review = '';
+            this.reviews = null;
+            this.getReviews();
+          },
+          error: (err) => {
+            console.log(err);
+          },
+        });
+    } else {
+      const toastLiveExample = document.getElementById('liveToast');
+      toastLiveExample?.classList.add('show');
+    }
   }
   getReviews() {
     this.reviewsService.getMealReviews(this.id).subscribe({
