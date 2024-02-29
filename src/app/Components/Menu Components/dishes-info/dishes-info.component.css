@@ -1,41 +1,55 @@
-.dishesSection{
-    text-align: center;
+.dishesSection {
+  text-align: center;
 }
-.dishesSection h1{
-    font-size: 3.2rem;
-    margin-bottom: 15px;
+
+.dishesSection h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
 }
-.dishesSection p{
-    font-size: 0.9rem;
+
+.dishesSection p {
+  font-size: 0.9rem;
 }
-.categories{
-    width: 80%;
-    margin:auto;
-    margin-bottom: 30px;
-    margin-top: 40px;
+
+.categories {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
+
 .categoriesButtonCollection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
 }
-.categpryButton{
-    border: 1px solid whitesmoke;
-    background-color: whitesmoke;
-    padding: 6px 50px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 
-    margin-right: 15px;
-    margin-bottom: 20px;
- }
- .categpryButton:hover{
-     background-color: var(--main-color);
-     color: var(--secondary-color);
- }
+.categpryButton {
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  padding: 6px 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.categpryButton:hover,
+.categories .active {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
