@@ -81,7 +81,7 @@
   </div>
 
   <div class="nav nav-pills justify-content-center p-3">
-    <a routerLink="/cart" class="text-center btn position-relative">
+    <a *ngIf="profilePicture" routerLink="/cart" class="text-center btn position-relative">
       <span
         class="position-absolute top-25 start-10 translate-middle bg-danger border border-light rounded-circle text-white py-0 px-2 text-center"
         style="font-weight: 900; font-size: 20px"
