@@ -1,0 +1,107 @@
+.about_rightSection h3{
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.about_rightSection p{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.about_rightSection span{
+
+font-size: 0.9rem;
+font-weight: 400;
+line-height: 24px;
+
+}
+.about_rightSection button{
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  width: 163px;
+  height: 64px;
+  padding: 20px, 32px, 20px, 32px;
+  gap: 10px;
+  border-radius: 110px;
+  -webkit-border-radius: 110px;
+  -moz-border-radius: 110px;
+  -ms-border-radius: 110px;
+  -o-border-radius: 110px;
+}
+.about_rightSection button:hover{
+  background-color: var(--btn-color-hover);
+}
+.about_LeftSection{
+  position: relative;
+}
+.aboutImage {
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.aboutImage  img {
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.aboutInfo{
+  position: absolute;
+  width: 65%;
+  bottom: -15%;
+  right: -15%;
+  background-color:var( --info-color) ;
+  padding:  30px 20px;
+  color: var(--secondary-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.aboutInfo .info{
+  display: flex;
+
+}
+.aboutInfo h6 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.aboutInfo .info svg{
+  margin-right: 10px;
+}
+.aboutInfo .info span {
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (max-width:768px) {
+  .aboutInfo{
+      width: 98%;
+      bottom: -10%;
+      right: 0px;
+  }
+  .about_rightSection{
+      margin-top: 20%;
+  }
+}
+
+@media (max-width:576px) {
+  .aboutInfo{
+      width: 98%;
+      bottom: -10%;
+      right: 0px;
+  }
+  .about_rightSection{
+      margin-top: 20%;
+  }
+}
+@media   (min-width:769px) and ( max-width:992px){
+  .aboutInfo{
+      width: 98%;
+  }
+}
