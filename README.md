@@ -39,9 +39,3 @@ FoodEats is a food delivery website where customers can browse a variety of food
 - **Backend:**
   - MockAPI for simulating backend data and APIs.
 
-## Getting Started
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your-username/foodeats.git
