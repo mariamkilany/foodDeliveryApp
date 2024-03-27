@@ -1,30 +1,47 @@
-#  packeges installled 
-1-  bootstrap
 
-# FoodDeliverApp
+# FoodEats - Food Delivery Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+![Food Delivery Website](https://res.cloudinary.com/dgobv1j6b/image/upload/v1711516097/v2hnhnmn5wv176jludgj.jpg)
 
-## Development server
+FoodEats is a food delivery website where customers can browse a variety of foods, view recipes and ingredients, and filter them based on ingredients. Users can also read and add reviews for the food items. The website includes a shopping cart feature where users can add items, adjust quantities, and proceed to checkout to place their orders. Additionally, users can view their transaction history on the transactions page.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Browse and Search:**
+  - View a wide selection of foods with recipes and ingredients.
+  - Search for specific foods.
+  - Filter foods based on ingredients.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Reviews:**
+  - Read reviews from other users.
+  - Add and edit reviews for food items.
 
-## Build
+- **Shopping Cart:**
+  - Add food items to the shopping cart.
+  - Adjust quantities of items in the cart.
+  - Remove items from the cart.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Checkout:**
+  - Proceed to checkout to place orders.
+  - View total amount before ordering.
 
-## Running unit tests
+- **Transactions:**
+  - View transaction history.
+  - Track previous orders.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+- **Frontend:**
+  - Angular for building the user interface.
+  - Bootstrap for styling components.
+  - RxJS for handling asynchronous operations.
+  
+- **Backend:**
+  - MockAPI for simulating backend data and APIs.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Getting Started
 
-## Further help
+1. **Clone the repository:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   git clone https://github.com/your-username/foodeats.git
